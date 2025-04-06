@@ -1,0 +1,8 @@
+#!/bin/bash
+if[[-z "$1"]]; then
+echo 'usage:highest filename [-N]'
+else
+filename=$1
+howmany=${2:-10}
+sort -nr $filename | head -$howmany
+fi

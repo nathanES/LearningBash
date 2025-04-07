@@ -1,7 +1,7 @@
 #!/bin/bash
 pushd() {
   dirname=$1
-  if cd ${dirname:?"Missing directory name."}; then # if cd was succesfull
+  if [[ -n "$dirname" && -d "$dirname" && -x "$dirname"]]; then
     DIR_STACK="$dirname ${DIR_STACK:-$PWD''}"
     echo "$DIR_STACK"
   else

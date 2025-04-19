@@ -1,4 +1,5 @@
 #!/bin/bash
+# The driver script
 set -euo pipefail
 
 echo 'bash Debugger version 1.0'
